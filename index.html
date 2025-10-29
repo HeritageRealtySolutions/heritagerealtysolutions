@@ -6,7 +6,7 @@
   <title>Heritage Realty Solutions | Affordable Housing • Investor-Focused • Buy & Hold</title>
   <meta name="description" content="Heritage Realty Solutions acquires, renovates, and holds rental housing with a focus on affordability and quality. We partner with investors and operate a full-service construction team." />
   <meta property="og:title" content="Heritage Realty Solutions" />
-  <meta property="og:description" content="Investor‑focused acquisitions • Affordable housing • Full construction & renovations • Buy & hold." />
+  <meta property="og:description" content="Investor-focused acquisitions • Affordable housing • Full construction & renovations • Buy & hold." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0B56C4" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,54 +40,44 @@
     .btn-outline:hover{background:var(--blue);color:var(--white)}
 
     /* HERO */
-    .hero{background:var(--light);padding:5rem 0;text-align:center}
+    .hero{background:linear-gradient(180deg,#ffffff,#f4f7ff);padding:5rem 0;text-align:center}
     .hero h1{font-size:2.5rem;font-weight:800;line-height:1.2;margin-bottom:1rem}
     .hero h1 span{color:var(--gold)}
     .hero p{max-width:700px;margin:0 auto 2rem auto;font-size:1.1rem;line-height:1.6}
     .hero .cta{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
 
-    /* SECTION LAYOUT */
+    /* SECTIONS */
     section{padding:4rem 0;width:min(1200px,90%);margin:auto}
     h2{font-size:2rem;font-weight:700;text-align:center;margin-bottom:2rem;color:var(--ink)}
 
     .grid{display:grid;gap:1.5rem}
     .cards{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-    .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.5rem;text-align:left}
-    .card h3{color:var(--blue);margin-bottom:.5rem}
-
-    /* FORM */
-    form{display:grid;gap:1rem}
-    label{font-weight:600;font-size:.9rem}
-    input,textarea{padding:.8rem;border-radius:var(--radius);border:1px solid #ccc;font:inherit;width:100%}
-    textarea{min-height:100px}
-    button[type=submit]{background:var(--blue);color:var(--white);padding:.8rem;border:none;border-radius:var(--radius);font-weight:700;cursor:pointer}
-
-    /* FOOTER */
-    footer{background:var(--ink);color:var(--white);padding:2rem 0}
-    footer .foot{width:min(1200px,90%);margin:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
-    footer a{color:var(--white)}
-
-    @media(max-width:768px){
-      .hero h1{font-size:2rem}
-    }
-    /* Hover effects */
-    .card{transition:transform .25s ease, box-shadow .25s ease}
+    .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.5rem;text-align:left;transition:transform .25s ease, box-shadow .25s ease}
     .card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.12)}
-    .btn,.btn-primary,.btn-outline,button[type=submit]{transition:transform .15s ease, filter .15s ease, box-shadow .15s ease}
-    .btn-primary:hover,button[type=submit]:hover{box-shadow:0 10px 20px rgba(11,86,196,.25);transform:translateY(-1px)}
-    .btn-outline:hover{box-shadow:0 8px 18px rgba(11,86,196,.2);transform:translateY(-1px)}
 
-    /* Reveal on scroll */
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
-    .reveal.visible{opacity:1;transform:translateY(0)}
-
-    /* FAQ styles */
+    /* FAQ */
     #faq .faq-wrap{width:min(900px,96%);margin:0 auto;display:grid;gap:12px}
     #faq details{background:var(--white);border:1px solid #e6ecf5;border-radius:12px;box-shadow:var(--shadow);padding:.6rem 1rem}
     #faq summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;font-weight:700;color:var(--ink)}
     #faq summary::-webkit-details-marker{display:none}
     #faq details p{margin:.6rem 0 0 0;line-height:1.6;color:#42506a}
 
+    /* CONTACT */
+    #contact{background:linear-gradient(180deg,#fff,#fff4e0)}
+
+    /* FOOTER */
+    footer{background:var(--ink);color:var(--white);padding:3rem 0;margin-top:4rem}
+    footer .foot{width:min(1200px,90%);margin:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;align-items:flex-start}
+    footer .foot div{flex:1;min-width:240px}
+    footer img{height:70px;width:auto;margin-bottom:.5rem;filter:brightness(100%)}
+    footer h4{font-size:1rem;color:var(--gold);margin-bottom:.75rem}
+    footer p,footer a{color:#dce3f0;font-size:.95rem;line-height:1.6}
+    footer a:hover{color:var(--white)}
+    footer .bottom{text-align:center;margin-top:2rem;font-size:.85rem;color:#aaa}
+
+    /* REVEAL ANIMATION */
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
   </style>
 </head>
 <body>
@@ -98,7 +88,7 @@
         <span>Heritage Realty Solutions</span>
       </div>
       <div class="nav-buttons">
-        <a href="#contact" class="btn-outline">Call: 769‑275‑1347</a>
+        <a href="#contact" class="btn-outline">Call: 769-275-1347</a>
         <a href="#sell" class="btn-primary">Get an Offer</a>
       </div>
     </div>
@@ -106,99 +96,46 @@
 
   <section class="hero reveal">
     <h1>We acquire, renovate, and hold quality rentals—<br>with an emphasis on <span>affordable housing.</span></h1>
-    <p>We partner with investors to buy properties as‑is, execute value‑add renovations through our in‑house construction team, and keep units in our portfolio for stable, long‑term returns and community impact.</p>
+    <p>We partner with investors to buy properties as-is, execute value-add renovations through our in-house construction team, and keep units in our portfolio for stable, long-term returns and community impact.</p>
     <div class="cta">
       <a href="#sell" class="btn-primary">Sell a Property</a>
       <a href="#investors" class="btn-outline">Investor Portal</a>
     </div>
   </section>
 
-  <section id="services" class="reveal">
-    <h2>What We Do</h2>
-    <div class="grid cards">
-      <div class="card"><h3>Investor‑Focused Acquisitions</h3><p>We underwrite single and multifamily assets quickly and make firm offers with fair terms.</p></div>
-      <div class="card"><h3>Full Construction & Renovations</h3><p>Our in‑house crews handle full renovations, turns, and upgrades for lasting value.</p></div>
-      <div class="card"><h3>Affordable & Workforce Housing</h3><p>We focus on creating attainable homes for everyday families and workforce tenants.</p></div>
-      <div class="card"><h3>Buy & Hold Operations</h3><p>We maintain properties for reliable cash flow and long‑term neighborhood improvement.</p></div>
-    </div>
-  </section>
-
-  <section id="sell" class="reveal" style="background:var(--light)">
-    <h2>Sell a Property</h2>
-    <div class="grid" style="grid-template-columns:1fr 1fr;gap:2rem">
-      <div class="card">
-        <form name="sell-form" method="post" data-netlify="true">
-          <label>Property Address<input name="address" placeholder="123 Main St, City, ST" required></label>
-          <label>Your Name<input name="name" placeholder="Jane Seller" required></label>
-          <label>Phone<input name="phone" placeholder="(555) 555‑5555" required></label>
-          <label>Email<input name="email" placeholder="you@example.com"></label>
-          <label>Situation<textarea name="notes" placeholder="Tell us about the condition, tenants, or timeline."></textarea></label>
-          <button type="submit">Submit Property</button>
-        </form>
-      </div>
-      <div class="card">
-        <h3>Why Sellers Choose Us</h3>
-        <ul>
-          <li>No fees or showings — sell as‑is.</li>
-          <li>Flexible terms and fast closing.</li>
-          <li>Local team with in‑house construction.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="investors" class="reveal">$1</section>
-
-  <!-- FAQ -->
   <section id="faq" class="reveal" style="background:var(--light)">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-wrap">
-      <details>
-        <summary>How fast can you close on my property?<span>+</span></summary>
-        <p>We can provide a firm offer within 24–48 hours of review and close as quickly as your timeline and title allow—often within 7–14 days.</p>
-      </details>
-      <details>
-        <summary>Do I need to make repairs before selling?<span>+</span></summary>
-        <p>No. We buy as‑is. Our in‑house construction team handles all renovations after closing.</p>
-      </details>
-      <details>
-        <summary>What types of properties do you buy?<span>+</span></summary>
-        <p>Single‑family, duplexes/fourplexes, and small multifamily (5–30 units). We’ll also consider mixed‑use with strong residential components.</p>
-      </details>
-      <details>
-        <summary>How do you partner with investors?<span>+</span></summary>
-        <p>We focus on value‑add acquisitions, execute capex in‑house, and hold stabilized assets for durable yield. We’re open to joint ventures and structured partnerships.</p>
-      </details>
+      <details><summary>How fast can you close on my property?<span>+</span></summary><p>We can close in as little as 7–14 days, depending on title readiness.</p></details>
+      <details><summary>Do I need to make repairs before selling?<span>+</span></summary><p>No. We buy properties as-is, in any condition.</p></details>
+      <details><summary>What types of properties do you buy?<span>+</span></summary><p>We buy single-family, duplex, and small multifamily properties.</p></details>
+      <details><summary>How do you partner with investors?<span>+</span></summary><p>We structure partnerships around long-term equity and stable yield opportunities.</p></details>
     </div>
   </section>
-
-  <section id="contact"
 
   <footer>
     <div class="foot">
       <div>
-        <img src="heritage-logo.png" alt="Heritage Realty Solutions" style="height:40px;width:auto;margin-bottom:.5rem">
-        <p>Investor‑focused acquisitions and renovations with a commitment to affordable housing and long‑term portfolio holds.</p>
+        <img src="heritage-logo.png" alt="Heritage Realty Solutions">
+        <p>Investor-focused acquisitions and renovations with a commitment to affordable housing and long-term portfolio holds.</p>
       </div>
       <div>
-        <p><strong>Contact</strong><br>769‑275‑1347<br>601‑981‑2925<br><a href="mailto:marlon@heritagerealtysolutions.net">marlon@heritagerealtysolutions.net</a></p>
+        <h4>Contact</h4>
+        <p>Mobile: 769-275-1347<br>Office: 601-981-2925<br><a href="mailto:marlon@heritagerealtysolutions.net">marlon@heritagerealtysolutions.net</a></p>
       </div>
       <div>
-        <p><strong>Links</strong><br><a href="#services">Services</a><br><a href="#sell">Sell</a><br><a href="#investors">Investors</a><br><a href="#contact">Contact</a></p>
+        <h4>Quick Links</h4>
+        <p><a href="#services">Services</a><br><a href="#sell">Sell a Property</a><br><a href="#investors">Investors</a><br><a href="#contact">Contact Us</a></p>
       </div>
     </div>
+    <div class="bottom">© 2025 Heritage Realty Solutions. All Rights Reserved.</div>
   </footer>
+
   <script>
-    // IntersectionObserver to reveal sections
     const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target);} });
-    }, {threshold: 0.12});
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
+    }, {threshold:0.12});
     document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
   </script>
-</body>
-</html>
-
-    </div>
-  </footer>
 </body>
 </html>
