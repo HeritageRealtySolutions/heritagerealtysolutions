@@ -99,8 +99,16 @@
       width:var(--wrap); margin:0 auto; display:grid;
       grid-template-columns:1.25fr 1fr 1fr; gap:28px; align-items:start;
     }
-    footer .brand-block img{ height:86px; width:auto; margin-bottom:10px; filter:brightness(105%); }
-    footer .brand-block p{ color:#cfd8ea; line-height:1.6; }
+    footer .brand-block{ text-align:center; position:relative; }
+    footer .brand-block::before{
+      content:''; display:block; height:3px; width:80px; margin:0 auto 20px auto;
+      background:linear-gradient(90deg,var(--blue),var(--gold)); border-radius:6px;
+    }
+    footer .brand-block img{ height:86px; width:auto; margin:0 auto 10px; filter:brightness(105%); }
+    footer .brand-block .quote{
+      font-size:1.15rem; font-weight:700; color:#f5f7ff; font-style:italic;
+      letter-spacing:0.3px; line-height:1.6; max-width:380px; margin:0 auto;
+    }
     footer h4{ font-size:.95rem; letter-spacing:.02em; color:var(--gold); margin:4px 0 12px; text-transform:uppercase; }
     footer a{ color:#e7eef9; }
     footer a:hover{ color:#ffffff; text-decoration:underline; }
@@ -116,20 +124,13 @@
         grid-template-columns:1fr;
         gap:18px;
       }
-      footer .brand-block{
-        display:grid;
-        grid-template-columns:auto 1fr;
-        align-items:center;
-        gap:14px;
-      }
       footer .brand-block img{
-        height:52px;
-        margin-bottom:0;
+        height:58px;
+        margin-bottom:10px;
       }
-      footer .brand-block p{
-        margin:0;
-        max-width:44ch;
-        line-height:1.7;
+      footer .brand-block .quote{
+        font-size:1rem;
+        max-width:300px;
       }
       footer h4{margin-top:4px;}
       footer p,footer a{
@@ -196,14 +197,15 @@
   </div>
 </section>
 
-<!-- (Rest of content remains identical from your last working version: Services, Sell, Investors, FAQ, Contact, Ribbon) -->
+<!-- Replace this with your other sections: What We Do, Sell, Investors, FAQ, Contact, etc. -->
 
 <footer>
   <div class="foot">
     <div class="brand-block">
       <img src="heritage-logo.png" alt="Heritage Realty Solutions">
-      <p>Investor-focused acquisitions and renovations with a commitment to affordable housing and long-term buy-and-hold operations.</p>
+      <p class="quote">“Don’t Wish For It, Work For It.”</p>
     </div>
+
     <div>
       <h4>Contact</h4>
       <p>
@@ -212,6 +214,7 @@
         Email: <a href="mailto:marlon@heritagerealtysolutions.net">marlon@heritagerealtysolutions.net</a>
       </p>
     </div>
+
     <div>
       <h4>Links</h4>
       <p>
