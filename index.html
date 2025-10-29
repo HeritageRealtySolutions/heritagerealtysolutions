@@ -9,13 +9,11 @@
   <meta property="og:description" content="Investor-focused acquisitions • Affordable housing • Full construction & renovations • Buy & hold." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0B56C4" />
-
-  <!-- Inter font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Favicon (inline SVG; no separate file required) -->
+  <!-- Inline SVG favicon (no extra file needed) -->
   <link rel="icon" type="image/svg+xml"
         href='data:image/svg+xml;utf8,
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
@@ -32,10 +30,10 @@
 
   <style>
     :root{
-      --blue:#0B56C4;   /* Heritage blue */
-      --gold:#D89A00;   /* Heritage gold */
-      --ink:#1E2532;    /* body text */
-      --light:#F4F7FF;  /* soft bg */
+      --blue:#0B56C4;
+      --gold:#D89A00;
+      --ink:#1E2532;
+      --light:#F4F7FF;
       --white:#ffffff;
       --radius:14px;
       --shadow:0 6px 18px rgba(0,0,0,.10);
@@ -45,6 +43,7 @@
     body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--white)}
     a{color:var(--blue);text-decoration:none}
     img{display:block;max-width:100%}
+    :focus-visible{outline:3px solid rgba(11,86,196,.45);outline-offset:2px}
 
     /* HEADER */
     header{position:sticky;top:0;z-index:1000;background:var(--white);box-shadow:0 2px 14px rgba(20,28,40,.06)}
@@ -61,15 +60,15 @@
 
     /* HERO */
     .hero{background:linear-gradient(180deg,#ffffff,var(--light));padding:64px 0;text-align:center}
-    .hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.2;margin-bottom:12px}
+    .hero h1{font-size:clamp(1.7rem,5vw,2.8rem);font-weight:800;line-height:1.2;margin-bottom:12px}
     .hero h1 span{color:var(--gold)}
-    .hero p{max-width:720px;margin:0 auto 24px auto;font-size:1.05rem;line-height:1.65;color:#42506a}
+    .hero p{max-width:720px;margin:0 auto 24px auto;font-size:clamp(.98rem,2.6vw,1.05rem);line-height:1.65;color:#42506a}
     .cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 
     /* SECTIONS */
     section{padding:64px 0}
     .wrap{width:min(1200px,90%);margin:auto}
-    h2{font-size:clamp(1.4rem,3.2vw,2rem);font-weight:800;text-align:center;margin-bottom:24px}
+    h2{font-size:clamp(1.3rem,3.2vw,2rem);font-weight:800;text-align:center;margin-bottom:24px}
 
     .grid{display:grid;gap:18px}
     .cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
@@ -79,13 +78,10 @@
     /* FORMS */
     form{display:grid;gap:12px}
     label{font-weight:600;font-size:.92rem}
-    input,textarea{width:100%;padding:.8rem;border-radius:12px;border:1px solid #d9e1ef;font:inherit}
+    input,textarea{width:100%;padding:clamp(.9rem,2.8vw,1rem);border-radius:12px;border:1px solid #d9e1ef;font:inherit}
     textarea{min-height:110px;resize:vertical}
-    button[type=submit]{background:var(--blue);color:var(--white);padding:.85rem 1rem;border:none;border-radius:12px;font-weight:700;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease}
+    button[type=submit]{background:var(--blue);color:var(--white);padding:1rem;border:none;border-radius:12px;font-weight:700;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease}
     button[type=submit]:hover{box-shadow:0 10px 20px rgba(11,86,196,.25);transform:translateY(-1px)}
-
-    /* CONTACT BG */
-    #contact{background:linear-gradient(180deg,#fff,#fff4e0)}
 
     /* FAQ */
     #faq .faq-wrap{width:min(900px,96%);margin:0 auto;display:grid;gap:12px}
@@ -93,19 +89,19 @@
     #faq summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;font-weight:700;color:var(--ink)}
     #faq summary::-webkit-details-marker{display:none}
     #faq summary span{margin-left:12px;transition:transform .2s ease}
-    #faq details[open] summary span{transform:rotate(45deg)} /* turns + into × (minus look) */
+    #faq details[open] summary span{transform:rotate(45deg)}
     #faq details p{margin:.6rem 0 0 0;line-height:1.6;color:#42506a}
 
     /* RIBBON CTA */
     .ribbon{background:linear-gradient(90deg,#0B56C4,#1244d0);color:#fff}
     .ribbon .inner{width:min(1200px,90%);margin:auto;padding:22px 0;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-    .ribbon h3{font-weight:800;font-size:clamp(1.05rem,2.5vw,1.25rem);margin-right:auto}
+    .ribbon h3{font-weight:800;font-size:clamp(1.02rem,2.5vw,1.25rem);margin-right:auto}
     .ribbon .actions{display:flex;gap:10px}
     .ribbon .btn{border-color:#fff}
     .ribbon .btn-outline{color:#fff;border-color:#fff}
     .ribbon .btn-outline:hover{background:#fff;color:#0B56C4}
 
-    /* FOOTER (refreshed) */
+    /* FOOTER */
     footer{
       background:#0f1a2b; color:#e7eef9; padding:48px 0 28px; margin-top:0;
       border-top:1px solid rgba(255,255,255,0.06);
@@ -114,7 +110,6 @@
       width:min(1200px,92%); margin:0 auto; display:grid;
       grid-template-columns:1.25fr 1fr 1fr; gap:28px; align-items:start;
     }
-    @media (max-width:900px){ footer .foot{ grid-template-columns:1fr; } }
     footer .brand-block img{ height:84px; width:auto; margin-bottom:10px; filter:brightness(105%); }
     footer .brand-block p{ color:#cfd8ea; line-height:1.6; }
     footer h4{ font-size:.95rem; letter-spacing:.02em; color:var(--gold); margin:4px 0 12px; text-transform:uppercase; }
@@ -131,6 +126,43 @@
     .card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.12)}
     .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
+
+    /* ─────────── RESPONSIVE BREAKPOINTS ─────────── */
+
+    /* ≤ 900px: stack two-column layouts, relax spacing */
+    @media (max-width: 900px){
+      .nav{padding:10px 0}
+      .hero{padding:52px 0}
+      section{padding:52px 0}
+      .grid.cols-2{grid-template-columns:1fr}
+      footer .foot{grid-template-columns:1fr}
+    }
+
+    /* ≤ 768px: bigger touch targets, compact header buttons */
+    @media (max-width: 768px){
+      .brand img{height:42px}
+      .brand span{font-size:1.05rem}
+      .nav-buttons .btn{padding:.55rem .9rem}
+      .ribbon .inner{padding:16px 0}
+      input,textarea{font-size:16px} /* prevents iOS zoom */
+    }
+
+    /* ≤ 640px: tighten paddings, enlarge CTA buttons */
+    @media (max-width: 640px){
+      .hero{padding:44px 0}
+      section{padding:44px 0}
+      .btn, .btn-outline, .btn-primary{padding:.7rem 1rem}
+      .card{padding:18px}
+    }
+
+    /* Mobile sticky action bar (shows only < 768px) */
+    .mobile-bar{
+      position:fixed;bottom:0;left:0;right:0;z-index:999;
+      display:none;gap:10px;justify-content:space-between;
+      background:#ffffff;box-shadow:0 -8px 20px rgba(0,0,0,.08);padding:10px;
+    }
+    .mobile-bar a{flex:1;text-align:center}
+    @media (max-width: 768px){ .mobile-bar{display:flex} body{padding-bottom:74px} }
   </style>
 </head>
 <body>
@@ -193,7 +225,7 @@
   <section id="sell" class="reveal" style="background:var(--light)">
     <div class="wrap">
       <h2>Sell a Property</h2>
-      <div class="grid" style="grid-template-columns:1fr 1fr;gap:24px">
+      <div class="grid cols-2" style="grid-template-columns:1fr 1fr;gap:24px">
         <div class="card">
           <form name="sell-form" method="post">
             <label>Property Address
@@ -230,7 +262,7 @@
   <section id="investors" class="reveal">
     <div class="wrap">
       <h2>For Investors & Partners</h2>
-      <div class="grid" style="grid-template-columns:1fr 1fr;gap:24px">
+      <div class="grid cols-2" style="grid-template-columns:1fr 1fr;gap:24px">
         <div class="card">
           <h3>Strategy</h3>
           <p style="color:#42506a;line-height:1.65">
@@ -294,7 +326,7 @@
   <section id="contact" class="reveal" style="background:linear-gradient(180deg,#fff,#fff4e0)">
     <div class="wrap">
       <h2>Contact Us</h2>
-      <div class="grid" style="grid-template-columns:1fr 1fr;gap:24px">
+      <div class="grid cols-2" style="grid-template-columns:1fr 1fr;gap:24px">
         <div class="card">
           <p><strong>Email:</strong> <a href="mailto:marlon@heritagerealtysolutions.net">marlon@heritagerealtysolutions.net</a><br>
              <strong>Mobile:</strong> <a href="tel:+17692751347">769-275-1347</a><br>
@@ -358,6 +390,12 @@
     <div class="bottom">© 2025 Heritage Realty Solutions. All Rights Reserved.</div>
   </footer>
 
+  <!-- Mobile sticky action bar (shows under 768px) -->
+  <div class="mobile-bar" aria-label="Quick actions">
+    <a href="tel:+17692751347" class="btn btn-outline">Call</a>
+    <a href="#sell" class="btn btn-primary">Get an Offer</a>
+  </div>
+
   <script>
     // Reveal on scroll
     const observer = new IntersectionObserver((entries)=>{
@@ -372,3 +410,4 @@
   </script>
 </body>
 </html>
+
