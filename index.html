@@ -70,6 +70,24 @@
     @media(max-width:768px){
       .hero h1{font-size:2rem}
     }
+    /* Hover effects */
+    .card{transition:transform .25s ease, box-shadow .25s ease}
+    .card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.12)}
+    .btn,.btn-primary,.btn-outline,button[type=submit]{transition:transform .15s ease, filter .15s ease, box-shadow .15s ease}
+    .btn-primary:hover,button[type=submit]:hover{box-shadow:0 10px 20px rgba(11,86,196,.25);transform:translateY(-1px)}
+    .btn-outline:hover{box-shadow:0 8px 18px rgba(11,86,196,.2);transform:translateY(-1px)}
+
+    /* Reveal on scroll */
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    /* FAQ styles */
+    #faq .faq-wrap{width:min(900px,96%);margin:0 auto;display:grid;gap:12px}
+    #faq details{background:var(--white);border:1px solid #e6ecf5;border-radius:12px;box-shadow:var(--shadow);padding:.6rem 1rem}
+    #faq summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;font-weight:700;color:var(--ink)}
+    #faq summary::-webkit-details-marker{display:none}
+    #faq details p{margin:.6rem 0 0 0;line-height:1.6;color:#42506a}
+
   </style>
 </head>
 <body>
@@ -86,7 +104,7 @@
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero reveal">
     <h1>We acquire, renovate, and hold quality rentals—<br>with an emphasis on <span>affordable housing.</span></h1>
     <p>We partner with investors to buy properties as‑is, execute value‑add renovations through our in‑house construction team, and keep units in our portfolio for stable, long‑term returns and community impact.</p>
     <div class="cta">
@@ -95,7 +113,7 @@
     </div>
   </section>
 
-  <section id="services">
+  <section id="services" class="reveal">
     <h2>What We Do</h2>
     <div class="grid cards">
       <div class="card"><h3>Investor‑Focused Acquisitions</h3><p>We underwrite single and multifamily assets quickly and make firm offers with fair terms.</p></div>
@@ -105,7 +123,7 @@
     </div>
   </section>
 
-  <section id="sell" style="background:var(--light)">
+  <section id="sell" class="reveal" style="background:var(--light)">
     <h2>Sell a Property</h2>
     <div class="grid" style="grid-template-columns:1fr 1fr;gap:2rem">
       <div class="card">
@@ -129,44 +147,32 @@
     </div>
   </section>
 
-  <section id="investors">
-    <h2>For Investors & Partners</h2>
-    <div class="grid" style="grid-template-columns:1fr 1fr;gap:2rem">
-      <div class="card">
-        <h3>Strategy</h3>
-        <p>We pursue long‑term yield by acquiring, renovating, and stabilizing affordable housing portfolios in strong markets.</p>
-      </div>
-      <div class="card">
-        <form name="investor-form" method="post" data-netlify="true">
-          <label>Name<input name="name" placeholder="Alex Investor" required></label>
-          <label>Email<input type="email" name="email" placeholder="you@company.com" required></label>
-          <label>Phone<input name="phone" placeholder="(555) 555‑5555"></label>
-          <label>Message<textarea name="message" placeholder="Share goals or questions."></textarea></label>
-          <button type="submit">Request Info</button>
-        </form>
-      </div>
+  <section id="investors" class="reveal">$1</section>
+
+  <!-- FAQ -->
+  <section id="faq" class="reveal" style="background:var(--light)">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-wrap">
+      <details>
+        <summary>How fast can you close on my property?<span>+</span></summary>
+        <p>We can provide a firm offer within 24–48 hours of review and close as quickly as your timeline and title allow—often within 7–14 days.</p>
+      </details>
+      <details>
+        <summary>Do I need to make repairs before selling?<span>+</span></summary>
+        <p>No. We buy as‑is. Our in‑house construction team handles all renovations after closing.</p>
+      </details>
+      <details>
+        <summary>What types of properties do you buy?<span>+</span></summary>
+        <p>Single‑family, duplexes/fourplexes, and small multifamily (5–30 units). We’ll also consider mixed‑use with strong residential components.</p>
+      </details>
+      <details>
+        <summary>How do you partner with investors?<span>+</span></summary>
+        <p>We focus on value‑add acquisitions, execute capex in‑house, and hold stabilized assets for durable yield. We’re open to joint ventures and structured partnerships.</p>
+      </details>
     </div>
   </section>
 
-  <section id="contact" style="background:linear-gradient(180deg,#fff,#fff4e0)">
-    <h2>Contact Us</h2>
-    <div class="grid" style="grid-template-columns:1fr 1fr;gap:2rem">
-      <div class="card">
-        <p><strong>Email:</strong> <a href="mailto:marlon@heritagerealtysolutions.net">marlon@heritagerealtysolutions.net</a><br>
-        <strong>Mobile:</strong> <a href="tel:+17692751347">769‑275‑1347</a><br>
-        <strong>Office:</strong> <a href="tel:+16019812925">601‑981‑2925</a></p>
-        <p><small>Business hours: Mon–Fri 9a–6p (CT) • Sat by appointment</small></p>
-      </div>
-      <div class="card">
-        <form name="contact-form" method="post" data-netlify="true">
-          <label>Your Name<input name="name" required></label>
-          <label>Your Email<input type="email" name="email" required></label>
-          <label>Message<textarea name="message" placeholder="How can we help?"></textarea></label>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </section>
+  <section id="contact"
 
   <footer>
     <div class="foot">
@@ -180,6 +186,18 @@
       <div>
         <p><strong>Links</strong><br><a href="#services">Services</a><br><a href="#sell">Sell</a><br><a href="#investors">Investors</a><br><a href="#contact">Contact</a></p>
       </div>
+    </div>
+  </footer>
+  <script>
+    // IntersectionObserver to reveal sections
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target);} });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
+
     </div>
   </footer>
 </body>
