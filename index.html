@@ -9,78 +9,133 @@
   <meta property="og:description" content="Investor-focused acquisitions • Affordable housing • Full construction & renovations • Buy & hold." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0B56C4" />
+
+  <!-- Inter font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon (inline SVG; no separate file required) -->
+  <link rel="icon" type="image/svg+xml"
+        href='data:image/svg+xml;utf8,
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+          <defs>
+            <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0" stop-color="%230B56C4"/>
+              <stop offset="1" stop-color="%231244d0"/>
+            </linearGradient>
+          </defs>
+          <rect width="128" height="128" rx="22" fill="url(%23g)"/>
+          <path d="M28 92V52l36-24 36 24v40h-14V62L64 40 42 62v30H28z" fill="%23D89A00"/>
+          <rect x="52" y="52" width="24" height="40" fill="%23ffffff" rx="3"/>
+        </svg>' />
+
   <style>
     :root{
-      --blue:#0B56C4;
-      --gold:#D89A00;
-      --ink:#1E2532;
-      --light:#F9FBFF;
+      --blue:#0B56C4;   /* Heritage blue */
+      --gold:#D89A00;   /* Heritage gold */
+      --ink:#1E2532;    /* body text */
+      --light:#F4F7FF;  /* soft bg */
       --white:#ffffff;
-      --shadow:0 6px 18px rgba(0,0,0,0.1);
       --radius:14px;
+      --shadow:0 6px 18px rgba(0,0,0,.10);
     }
+
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Inter,sans-serif;color:var(--ink);background:var(--white)}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--white)}
     a{color:var(--blue);text-decoration:none}
+    img{display:block;max-width:100%}
 
     /* HEADER */
-    header{background:var(--white);box-shadow:var(--shadow);position:sticky;top:0;z-index:1000}
-    .nav{display:flex;align-items:center;justify-content:space-between;width:min(1200px,90%);margin:auto;padding:1rem 0}
+    header{position:sticky;top:0;z-index:1000;background:var(--white);box-shadow:0 2px 14px rgba(20,28,40,.06)}
+    .nav{width:min(1200px,90%);margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 0}
     .brand{display:flex;align-items:center;gap:10px}
-    .brand img{height:48px;width:auto}
-    .brand span{font-weight:800;font-size:1.2rem;color:var(--ink)}
-    .nav-buttons{display:flex;gap:10px}
-    .btn{padding:.6rem 1.2rem;border-radius:var(--radius);font-weight:600;border:none;cursor:pointer;transition:all .2s}
+    .brand img{height:48px;width:auto;object-fit:contain}
+    .brand span{font-weight:800;font-size:1.2rem}
+    .nav-buttons{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{padding:.6rem 1.1rem;border-radius:var(--radius);font-weight:600;display:inline-block;border:1px solid transparent;transition:transform .15s ease, box-shadow .15s ease, background .15s ease,color .15s ease}
+    .btn-outline{border-color:var(--blue);color:var(--blue);background:transparent}
+    .btn-outline:hover{background:var(--blue);color:var(--white);box-shadow:0 8px 18px rgba(11,86,196,.20);transform:translateY(-1px)}
     .btn-primary{background:var(--blue);color:var(--white)}
-    .btn-primary:hover{background:#09469e}
-    .btn-outline{border:1px solid var(--blue);background:transparent;color:var(--blue)}
-    .btn-outline:hover{background:var(--blue);color:var(--white)}
+    .btn-primary:hover{box-shadow:0 10px 20px rgba(11,86,196,.25);transform:translateY(-1px)}
 
     /* HERO */
-    .hero{background:linear-gradient(180deg,#ffffff,#f4f7ff);padding:5rem 0;text-align:center}
-    .hero h1{font-size:2.5rem;font-weight:800;line-height:1.2;margin-bottom:1rem}
+    .hero{background:linear-gradient(180deg,#ffffff,var(--light));padding:64px 0;text-align:center}
+    .hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.2;margin-bottom:12px}
     .hero h1 span{color:var(--gold)}
-    .hero p{max-width:700px;margin:0 auto 2rem auto;font-size:1.1rem;line-height:1.6}
-    .hero .cta{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+    .hero p{max-width:720px;margin:0 auto 24px auto;font-size:1.05rem;line-height:1.65;color:#42506a}
+    .cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 
     /* SECTIONS */
-    section{padding:4rem 0;width:min(1200px,90%);margin:auto}
-    h2{font-size:2rem;font-weight:700;text-align:center;margin-bottom:2rem;color:var(--ink)}
+    section{padding:64px 0}
+    .wrap{width:min(1200px,90%);margin:auto}
+    h2{font-size:clamp(1.4rem,3.2vw,2rem);font-weight:800;text-align:center;margin-bottom:24px}
 
-    .grid{display:grid;gap:1.5rem}
-    .cards{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-    .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.5rem;text-align:left;transition:transform .25s ease, box-shadow .25s ease}
-    .card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.12)}
+    .grid{display:grid;gap:18px}
+    .cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+    .card h3{font-size:1.05rem;color:var(--blue);margin-bottom:.4rem}
+
+    /* FORMS */
+    form{display:grid;gap:12px}
+    label{font-weight:600;font-size:.92rem}
+    input,textarea{width:100%;padding:.8rem;border-radius:12px;border:1px solid #d9e1ef;font:inherit}
+    textarea{min-height:110px;resize:vertical}
+    button[type=submit]{background:var(--blue);color:var(--white);padding:.85rem 1rem;border:none;border-radius:12px;font-weight:700;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease}
+    button[type=submit]:hover{box-shadow:0 10px 20px rgba(11,86,196,.25);transform:translateY(-1px)}
+
+    /* CONTACT BG */
+    #contact{background:linear-gradient(180deg,#fff,#fff4e0)}
 
     /* FAQ */
     #faq .faq-wrap{width:min(900px,96%);margin:0 auto;display:grid;gap:12px}
     #faq details{background:var(--white);border:1px solid #e6ecf5;border-radius:12px;box-shadow:var(--shadow);padding:.6rem 1rem}
     #faq summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;font-weight:700;color:var(--ink)}
     #faq summary::-webkit-details-marker{display:none}
+    #faq summary span{margin-left:12px;transition:transform .2s ease}
+    #faq details[open] summary span{transform:rotate(45deg)} /* turns + into × (minus look) */
     #faq details p{margin:.6rem 0 0 0;line-height:1.6;color:#42506a}
 
-    /* CONTACT */
-    #contact{background:linear-gradient(180deg,#fff,#fff4e0)}
+    /* RIBBON CTA */
+    .ribbon{background:linear-gradient(90deg,#0B56C4,#1244d0);color:#fff}
+    .ribbon .inner{width:min(1200px,90%);margin:auto;padding:22px 0;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .ribbon h3{font-weight:800;font-size:clamp(1.05rem,2.5vw,1.25rem);margin-right:auto}
+    .ribbon .actions{display:flex;gap:10px}
+    .ribbon .btn{border-color:#fff}
+    .ribbon .btn-outline{color:#fff;border-color:#fff}
+    .ribbon .btn-outline:hover{background:#fff;color:#0B56C4}
 
-    /* FOOTER */
-    footer{background:var(--ink);color:var(--white);padding:3rem 0;margin-top:4rem}
-    footer .foot{width:min(1200px,90%);margin:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;align-items:flex-start}
-    footer .foot div{flex:1;min-width:240px}
-    footer img{height:70px;width:auto;margin-bottom:.5rem;filter:brightness(100%)}
-    footer h4{font-size:1rem;color:var(--gold);margin-bottom:.75rem}
-    footer p,footer a{color:#dce3f0;font-size:.95rem;line-height:1.6}
-    footer a:hover{color:var(--white)}
-    footer .bottom{text-align:center;margin-top:2rem;font-size:.85rem;color:#aaa}
+    /* FOOTER (refreshed) */
+    footer{
+      background:#0f1a2b; color:#e7eef9; padding:48px 0 28px; margin-top:0;
+      border-top:1px solid rgba(255,255,255,0.06);
+    }
+    footer .foot{
+      width:min(1200px,92%); margin:0 auto; display:grid;
+      grid-template-columns:1.25fr 1fr 1fr; gap:28px; align-items:start;
+    }
+    @media (max-width:900px){ footer .foot{ grid-template-columns:1fr; } }
+    footer .brand-block img{ height:84px; width:auto; margin-bottom:10px; filter:brightness(105%); }
+    footer .brand-block p{ color:#cfd8ea; line-height:1.6; }
+    footer h4{ font-size:.95rem; letter-spacing:.02em; color:var(--gold); margin:4px 0 12px; text-transform:uppercase; }
+    footer a{ color:#e7eef9; text-decoration:none; }
+    footer a:hover{ color:#ffffff; text-decoration:underline; }
+    footer .bottom{
+      width:min(1200px,92%); margin:28px auto 0; padding-top:18px;
+      border-top:1px solid rgba(255,255,255,0.08); text-align:center;
+      font-size:.9rem; color:#aeb9d1;
+    }
 
-    /* REVEAL ANIMATION */
+    /* HOVERS + REVEAL */
+    .card{transition:transform .25s ease, box-shadow .25s ease}
+    .card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.12)}
     .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <div class="nav">
       <div class="brand">
@@ -88,52 +143,230 @@
         <span>Heritage Realty Solutions</span>
       </div>
       <div class="nav-buttons">
-        <a href="#contact" class="btn-outline">Call: 769-275-1347</a>
-        <a href="#sell" class="btn-primary">Get an Offer</a>
+        <a href="#contact" class="btn btn-outline">Call: 769-275-1347</a>
+        <a href="#sell" class="btn btn-primary">Get an Offer</a>
       </div>
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="hero reveal">
-    <h1>We acquire, renovate, and hold quality rentals—<br>with an emphasis on <span>affordable housing.</span></h1>
-    <p>We partner with investors to buy properties as-is, execute value-add renovations through our in-house construction team, and keep units in our portfolio for stable, long-term returns and community impact.</p>
-    <div class="cta">
-      <a href="#sell" class="btn-primary">Sell a Property</a>
-      <a href="#investors" class="btn-outline">Investor Portal</a>
+    <div class="wrap">
+      <h1>We acquire, renovate, and hold quality rentals—<br>with an emphasis on <span>affordable housing.</span></h1>
+      <p>
+        We partner with investors to buy properties as-is, execute value-add renovations through our in-house construction team,
+        and keep units in our portfolio for stable, long-term returns and community impact.
+      </p>
+      <div class="cta">
+        <a href="#sell" class="btn btn-primary">Sell a Property</a>
+        <a href="#investors" class="btn btn-outline">Investor Portal</a>
+      </div>
     </div>
   </section>
 
+  <!-- Services -->
+  <section id="services" class="reveal">
+    <div class="wrap">
+      <h2>What We Do</h2>
+      <div class="grid cards">
+        <div class="card">
+          <h3>Investor-Focused Acquisitions</h3>
+          <p>We underwrite single and multifamily assets quickly and make firm offers with fair terms.</p>
+        </div>
+        <div class="card">
+          <h3>Full Construction & Renovations</h3>
+          <p>Our in-house crews handle full renovations, turns, and upgrades for lasting value.</p>
+        </div>
+        <div class="card">
+          <h3>Affordable & Workforce Housing</h3>
+          <p>We focus on creating attainable homes for everyday families and workforce tenants.</p>
+        </div>
+        <div class="card">
+          <h3>Buy & Hold Operations</h3>
+          <p>We maintain properties for reliable cash flow and long-term neighborhood improvement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sell -->
+  <section id="sell" class="reveal" style="background:var(--light)">
+    <div class="wrap">
+      <h2>Sell a Property</h2>
+      <div class="grid" style="grid-template-columns:1fr 1fr;gap:24px">
+        <div class="card">
+          <form name="sell-form" method="post">
+            <label>Property Address
+              <input name="address" placeholder="123 Main St, City, ST" required>
+            </label>
+            <label>Your Name
+              <input name="name" placeholder="Jane Seller" required>
+            </label>
+            <label>Phone
+              <input name="phone" placeholder="(555) 555-5555" required>
+            </label>
+            <label>Email
+              <input name="email" placeholder="you@example.com">
+            </label>
+            <label>Situation
+              <textarea name="notes" placeholder="Tell us about the condition, tenants, or timeline."></textarea>
+            </label>
+            <button type="submit">Submit Property</button>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Why Sellers Choose Us</h3>
+          <ul style="margin:.6rem 0 0 1.2rem;line-height:1.65;color:#42506a">
+            <li>No fees or showings — sell as-is.</li>
+            <li>Flexible terms and fast closing.</li>
+            <li>Local team with in-house construction.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Investors -->
+  <section id="investors" class="reveal">
+    <div class="wrap">
+      <h2>For Investors & Partners</h2>
+      <div class="grid" style="grid-template-columns:1fr 1fr;gap:24px">
+        <div class="card">
+          <h3>Strategy</h3>
+          <p style="color:#42506a;line-height:1.65">
+            Target cash-flowing assets with executable value-add. Stabilize through efficient capex and
+            resident-first operations; hold for long-term yield and responsible appreciation.
+          </p>
+          <h3 style="margin-top:12px">Highlights</h3>
+          <ul style="margin:.4rem 0 0 1.2rem;line-height:1.65;color:#42506a">
+            <li>Disciplined underwriting with conservative stress tests.</li>
+            <li>In-house construction compresses timelines and costs.</li>
+            <li>Affordability focus broadens demand and resilience.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <form name="investor-form" method="post">
+            <label>Name
+              <input name="name" placeholder="Alex Investor" required>
+            </label>
+            <label>Email
+              <input type="email" name="email" placeholder="you@company.com" required>
+            </label>
+            <label>Phone
+              <input name="phone" placeholder="(555) 555-5555">
+            </label>
+            <label>Message
+              <textarea name="message" placeholder="Share goals, target check size, or questions."></textarea>
+            </label>
+            <button type="submit">Request Info</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
   <section id="faq" class="reveal" style="background:var(--light)">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-wrap">
-      <details><summary>How fast can you close on my property?<span>+</span></summary><p>We can close in as little as 7–14 days, depending on title readiness.</p></details>
-      <details><summary>Do I need to make repairs before selling?<span>+</span></summary><p>No. We buy properties as-is, in any condition.</p></details>
-      <details><summary>What types of properties do you buy?<span>+</span></summary><p>We buy single-family, duplex, and small multifamily properties.</p></details>
-      <details><summary>How do you partner with investors?<span>+</span></summary><p>We structure partnerships around long-term equity and stable yield opportunities.</p></details>
+    <div class="wrap">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-wrap">
+        <details>
+          <summary>How fast can you close on my property?<span>+</span></summary>
+          <p>We can close in as little as 7–14 days, depending on title readiness.</p>
+        </details>
+        <details>
+          <summary>Do I need to make repairs before selling?<span>+</span></summary>
+          <p>No. We buy properties as-is, in any condition.</p>
+        </details>
+        <details>
+          <summary>What types of properties do you buy?<span>+</span></summary>
+          <p>Single-family, duplexes/fourplexes, and small multifamily properties.</p>
+        </details>
+        <details>
+          <summary>How do you partner with investors?<span>+</span></summary>
+          <p>We structure partnerships around long-term equity and stable yield opportunities.</p>
+        </details>
+      </div>
     </div>
   </section>
 
+  <!-- Contact -->
+  <section id="contact" class="reveal" style="background:linear-gradient(180deg,#fff,#fff4e0)">
+    <div class="wrap">
+      <h2>Contact Us</h2>
+      <div class="grid" style="grid-template-columns:1fr 1fr;gap:24px">
+        <div class="card">
+          <p><strong>Email:</strong> <a href="mailto:marlon@heritagerealtysolutions.net">marlon@heritagerealtysolutions.net</a><br>
+             <strong>Mobile:</strong> <a href="tel:+17692751347">769-275-1347</a><br>
+             <strong>Office:</strong> <a href="tel:+16019812925">601-981-2925</a></p>
+          <p><small>Business hours: Mon–Fri 9a–6p (CT) • Sat by appointment</small></p>
+        </div>
+        <div class="card">
+          <form name="contact-form" method="post">
+            <label>Your Name
+              <input name="name" required>
+            </label>
+            <label>Your Email
+              <input type="email" name="email" required>
+            </label>
+            <label>Message
+              <textarea name="message" placeholder="How can we help?"></textarea>
+            </label>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ribbon CTA -->
+  <div class="ribbon reveal">
+    <div class="inner">
+      <h3>Ready to sell? Get a firm offer in 24–48 hours.</h3>
+      <div class="actions">
+        <a href="tel:+17692751347" class="btn btn-outline">Call 769-275-1347</a>
+        <a href="#sell" class="btn btn-primary">Get an Offer</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer>
     <div class="foot">
-      <div>
+      <div class="brand-block">
         <img src="heritage-logo.png" alt="Heritage Realty Solutions">
-        <p>Investor-focused acquisitions and renovations with a commitment to affordable housing and long-term portfolio holds.</p>
+        <p>Investor-focused acquisitions and renovations with a commitment to affordable housing and long-term buy-and-hold operations.</p>
       </div>
       <div>
         <h4>Contact</h4>
-        <p>Mobile: 769-275-1347<br>Office: 601-981-2925<br><a href="mailto:marlon@heritagerealtysolutions.net">marlon@heritagerealtysolutions.net</a></p>
+        <p>
+          Mobile: <a href="tel:+17692751347">769-275-1347</a><br>
+          Office: <a href="tel:+16019812925">601-981-2925</a><br>
+          Email: <a href="mailto:marlon@heritagerealtysolutions.net">marlon@heritagerealtysolutions.net</a>
+        </p>
       </div>
       <div>
-        <h4>Quick Links</h4>
-        <p><a href="#services">Services</a><br><a href="#sell">Sell a Property</a><br><a href="#investors">Investors</a><br><a href="#contact">Contact Us</a></p>
+        <h4>Links</h4>
+        <p>
+          <a href="#services">Services</a><br>
+          <a href="#sell">Sell a Property</a><br>
+          <a href="#investors">Investors</a><br>
+          <a href="#contact">Contact Us</a>
+        </p>
       </div>
     </div>
     <div class="bottom">© 2025 Heritage Realty Solutions. All Rights Reserved.</div>
   </footer>
 
   <script>
+    // Reveal on scroll
     const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      })
     }, {threshold:0.12});
     document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
   </script>
