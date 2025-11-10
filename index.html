@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Heritage Realty Solutions | Affordable Housing • Investor-Focused • Buy & Hold</title>
-  <meta name="description" content="Heritage Realty Solutions acquires, renovates, and holds rental housing with a focus on affordability and quality. We partner with investors and operate a full-service construction team for stable, long-term returns and community impact." />
-  <meta property="og:title" content="Heritage Realty Solutions" />
-  <meta property="og:description" content="Investor-focused acquisitions • Affordable housing • Full construction & renovations • Buy & hold." />
+  <title>Heritage Realty Solutions | Presented by Lumen Capital LLC</title>
+  <meta name="description" content="Heritage Realty Solutions, presented by Lumen Capital LLC, acquires, renovates, and holds rental housing with a focus on affordability and quality. Investor-focused, buy & hold, with a full in-house construction team." />
+  <meta property="og:title" content="Heritage Realty Solutions | Presented by Lumen Capital LLC" />
+  <meta property="og:description" content="Investor-focused acquisitions • Affordable housing • Full construction & renovations • Buy & hold • Presented by Lumen Capital LLC." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#0B56C4" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,11 +36,27 @@
     /* HEADER */
     header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 2px 14px rgba(20,28,40,.06)}
     .nav{width:var(--wrap);margin:auto;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:10px 0}
-    .brand{display:flex;align-items:center;gap:10px}
+    .brand{display:flex;flex-direction:column;gap:4px}
+    .brand .main-title{display:flex;align-items:center;gap:10px}
     .brand img{height:44px;width:auto;object-fit:contain}
     .brand span{font-weight:800;font-size:1.15rem;line-height:1.05}
+    .brand small{
+      color:var(--gold);
+      font-weight:600;
+      font-size:.85rem;
+      margin-left:54px;
+      letter-spacing:.01em;
+    }
     .nav-buttons{display:flex;gap:10px;flex-wrap:wrap;justify-self:end}
-    .btn{padding:.6rem 1.05rem;border-radius:var(--radius);font-weight:700;display:inline-block;border:1px solid transparent;transition:transform .15s ease,box-shadow .15s ease,background .15s ease,color .15s ease;white-space:nowrap}
+    .btn{
+      padding:.6rem 1.05rem;
+      border-radius:var(--radius);
+      font-weight:700;
+      display:inline-block;
+      border:1px solid transparent;
+      transition:transform .15s ease,box-shadow .15s ease,background .15s ease,color .15s ease;
+      white-space:nowrap;
+    }
     .btn-outline{border-color:var(--blue);color:var(--blue);background:transparent}
     .btn-outline:hover{background:var(--blue);color:#fff;box-shadow:0 8px 18px rgba(11,86,196,.20);transform:translateY(-1px)}
     .btn-primary{background:var(--blue);color:#fff}
@@ -49,19 +65,42 @@
     /* HERO */
     .hero{background:linear-gradient(180deg,#ffffff,var(--light));padding:64px 0;text-align:center}
     .wrap{width:var(--wrap);margin:auto}
-    .hero h1{font-size:clamp(1.7rem,5vw,2.8rem);font-weight:800;line-height:1.2;margin-bottom:12px;letter-spacing:-.01em}
+    .hero h1{
+      font-size:clamp(1.7rem,5vw,2.8rem);
+      font-weight:800;
+      line-height:1.2;
+      margin-bottom:12px;
+      letter-spacing:-.01em;
+    }
     .hero h1 span{color:var(--gold)}
-    .hero p{max-width:780px;margin:0 auto 24px auto;font-size:clamp(1rem,2.6vw,1.06rem);line-height:1.65;color:var(--muted)}
+    .hero p{
+      max-width:780px;
+      margin:0 auto 24px auto;
+      font-size:clamp(1rem,2.6vw,1.06rem);
+      line-height:1.65;
+      color:var(--muted);
+    }
     .cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 
     /* GENERIC SECTION */
     section{padding:64px 0}
-    h2{font-size:clamp(1.35rem,3.2vw,2rem);font-weight:800;text-align:center;margin-bottom:24px}
+    h2{
+      font-size:clamp(1.35rem,3.2vw,2rem);
+      font-weight:800;
+      text-align:center;
+      margin-bottom:24px;
+    }
 
     .grid{display:grid;gap:20px}
     .cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
     .cols-2{grid-template-columns:1fr 1fr}
-    .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;transition:transform .25s ease,box-shadow .25s ease}
+    .card{
+      background:#fff;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px;
+      transition:transform .25s ease,box-shadow .25s ease;
+    }
     .card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.12)}
     .card h3{font-size:1.05rem;color:var(--blue);margin-bottom:.4rem}
     .muted{color:var(--muted)}
@@ -69,15 +108,44 @@
     /* FORMS */
     form{display:grid;gap:12px}
     label{font-weight:700;font-size:.92rem}
-    input,textarea{width:100%;padding:clamp(.9rem,2.8vw,1rem);border-radius:12px;border:1px solid #d9e1ef;font:inherit}
+    input,textarea{
+      width:100%;
+      padding:clamp(.9rem,2.8vw,1rem);
+      border-radius:12px;
+      border:1px solid #d9e1ef;
+      font:inherit;
+    }
     textarea{min-height:110px;resize:vertical}
-    button[type=submit]{background:var(--blue);color:#fff;padding:1rem;border:none;border-radius:12px;font-weight:800;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease}
+    button[type=submit]{
+      background:var(--blue);
+      color:#fff;
+      padding:1rem;
+      border:none;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
     button[type=submit]:hover{box-shadow:0 10px 20px rgba(11,86,196,.25);transform:translateY(-1px)}
 
     /* FAQ */
     #faq .faq-wrap{width:min(900px,96%);margin:0 auto;display:grid;gap:12px}
-    #faq details{background:#fff;border:1px solid #e6ecf5;border-radius:12px;box-shadow:var(--shadow);padding:.6rem 1rem}
-    #faq summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;font-weight:800;color:var(--ink)}
+    #faq details{
+      background:#fff;
+      border:1px solid #e6ecf5;
+      border-radius:12px;
+      box-shadow:var(--shadow);
+      padding:.6rem 1rem;
+    }
+    #faq summary{
+      cursor:pointer;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      font-weight:800;
+      color:var(--ink);
+    }
     #faq summary::-webkit-details-marker{display:none}
     #faq summary span{margin-left:12px;transition:transform .2s ease}
     #faq details[open] summary span{transform:rotate(45deg)}
@@ -85,38 +153,91 @@
 
     /* RIBBON CTA */
     .ribbon{background:linear-gradient(90deg,var(--blue),var(--blue2));color:#fff}
-    .ribbon .inner{width:var(--wrap);margin:auto;padding:22px 0;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-    .ribbon h3{font-weight:800;font-size:clamp(1.02rem,2.5vw,1.25rem);margin-right:auto}
+    .ribbon .inner{
+      width:var(--wrap);
+      margin:auto;
+      padding:22px 0;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .ribbon h3{
+      font-weight:800;
+      font-size:clamp(1.02rem,2.5vw,1.25rem);
+      margin-right:auto;
+    }
     .ribbon .actions{display:flex;gap:10px}
     .ribbon .btn-outline{color:#fff;border-color:#fff}
     .ribbon .btn-outline:hover{background:#fff;color:var(--blue)}
 
     /* FOOTER (updated) */
     footer{
-      background:#0f1a2b; color:#e7eef9; padding:48px 0 28px;
+      background:#0f1a2b;
+      color:#e7eef9;
+      padding:48px 0 28px;
       border-top:1px solid rgba(255,255,255,0.06);
     }
     footer .foot{
-      width:var(--wrap); margin:0 auto; display:grid;
-      grid-template-columns:1.25fr 1fr 1fr; gap:28px; align-items:start;
+      width:var(--wrap);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.25fr 1fr 1fr;
+      gap:28px;
+      align-items:start;
     }
-    footer .brand-block{ text-align:center; position:relative; }
+    footer .brand-block{text-align:center;position:relative;}
     footer .brand-block::before{
-      content:''; display:block; height:3px; width:80px; margin:0 auto 20px auto;
-      background:linear-gradient(90deg,var(--blue),var(--gold)); border-radius:6px;
+      content:'';
+      display:block;
+      height:3px;
+      width:80px;
+      margin:0 auto 20px auto;
+      background:linear-gradient(90deg,var(--blue),var(--gold));
+      border-radius:6px;
     }
-    footer .brand-block img{ height:86px; width:auto; margin:0 auto 10px; filter:brightness(105%); }
+    footer .brand-block img{
+      height:86px;
+      width:auto;
+      margin:0 auto 10px;
+      filter:brightness(105%);
+    }
     footer .brand-block .quote{
-      font-size:1.15rem; font-weight:700; color:#f5f7ff; font-style:italic;
-      letter-spacing:0.3px; line-height:1.6; max-width:380px; margin:0 auto;
+      font-size:1.15rem;
+      font-weight:700;
+      color:#f5f7ff;
+      font-style:italic;
+      letter-spacing:0.3px;
+      line-height:1.6;
+      max-width:380px;
+      margin:0 auto;
     }
-    footer h4{ font-size:.95rem; letter-spacing:.02em; color:var(--gold); margin:4px 0 12px; text-transform:uppercase; }
-    footer a{ color:#e7eef9; }
-    footer a:hover{ color:#ffffff; text-decoration:underline; }
+    footer .brand-block small{
+      display:block;
+      color:#f6ce77;
+      font-weight:600;
+      margin-top:6px;
+      font-size:.9rem;
+      letter-spacing:.02em;
+    }
+    footer h4{
+      font-size:.95rem;
+      letter-spacing:.02em;
+      color:var(--gold);
+      margin:4px 0 12px;
+      text-transform:uppercase;
+    }
+    footer a{color:#e7eef9;}
+    footer a:hover{color:#ffffff;text-decoration:underline;}
     footer .bottom{
-      width:var(--wrap); margin:28px auto 0; padding-top:18px;
-      border-top:1px solid rgba(255,255,255,0.08); text-align:center;
-      font-size:.9rem; color:#aeb9d1;
+      width:var(--wrap);
+      margin:28px auto 0;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,0.08);
+      text-align:center;
+      font-size:.9rem;
+      color:#aeb9d1;
     }
 
     /* RESPONSIVE LAYOUTS */
@@ -126,8 +247,14 @@
       footer .brand-block img{height:58px;margin-bottom:10px}
       footer .brand-block .quote{font-size:1rem;max-width:300px}
       input,textarea{font-size:16px}
+      .brand small{
+        font-size:.8rem;
+        margin-left:0;
+        text-align:left;
+      }
     }
     @media (max-width:768px){
+      .brand .main-title{align-items:center}
       .brand img{height:38px}
       .brand span{font-size:1.02rem}
       .nav-buttons .btn{padding:.5rem .8rem;border-radius:12px}
@@ -135,13 +262,21 @@
 
     /* MOBILE ACTION BAR */
     .mobile-bar{
-      position:fixed;bottom:0;left:0;right:0;z-index:999;
-      display:none;gap:10px;justify-content:space-between;
-      background:#ffffff;box-shadow:0 -8px 20px rgba(0,0,0,.08);
+      position:fixed;
+      bottom:0;left:0;right:0;
+      z-index:999;
+      display:none;
+      gap:10px;
+      justify-content:space-between;
+      background:#ffffff;
+      box-shadow:0 -8px 20px rgba(0,0,0,.08);
       padding:10px 10px calc(10px + env(safe-area-inset-bottom,0px));
     }
     .mobile-bar a{flex:1;text-align:center}
-    @media (max-width:768px){.mobile-bar{display:flex}body{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px));}}
+    @media (max-width:768px){
+      .mobile-bar{display:flex}
+      body{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px));}
+    }
 
     /* REVEAL ANIMATION */
     .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
@@ -154,8 +289,11 @@
   <header>
     <div class="nav">
       <div class="brand">
-        <img src="heritage-logo.png" alt="Heritage Realty Solutions logo">
-        <span>Heritage Realty Solutions</span>
+        <div class="main-title">
+          <img src="heritage-logo.png" alt="Heritage Realty Solutions logo">
+          <span>Heritage Realty Solutions</span>
+        </div>
+        <small>Presented by Lumen Capital LLC</small>
       </div>
       <div></div>
       <div class="nav-buttons">
@@ -170,8 +308,9 @@
     <div class="wrap">
       <h1>We acquire, renovate, and hold quality rentals—<br>with an emphasis on <span>affordable housing.</span></h1>
       <p class="muted">
-        We partner with investors to buy properties as-is, execute value-add renovations through our in-house construction team,
-        and keep units in our portfolio for stable, long-term returns and community impact.
+        Heritage Realty Solutions, presented by Lumen Capital LLC, partners with investors to buy properties as-is,
+        complete value-add renovations through our in-house construction team, and hold them for stable, long-term returns
+        and community impact.
       </p>
       <div class="cta">
         <a href="#sell" class="btn btn-primary">Sell a Property</a>
@@ -252,7 +391,8 @@
         <div class="card">
           <h3>Strategy</h3>
           <p class="muted" style="margin-top:.5rem;">
-            Target cash-flowing assets with executable value-add. Stabilize through efficient capex and resident-first operations; hold for long-term yield and responsible appreciation.
+            Target cash-flowing assets with executable value-add. Stabilize through efficient capex and resident-first operations;
+            hold for long-term yield and responsible appreciation.
           </p>
           <h3 style="margin-top:1rem;">Highlights</h3>
           <ul class="muted" style="margin-top:.5rem;line-height:1.8;">
@@ -358,12 +498,13 @@
     </div>
   </section>
 
-  <!-- FOOTER (polished) -->
+  <!-- FOOTER -->
   <footer>
     <div class="foot">
       <div class="brand-block">
         <img src="heritage-logo.png" alt="Heritage Realty Solutions">
         <p class="quote">“Don’t Wish For It, Work For It.”</p>
+        <small>Heritage Realty Solutions • Presented by Lumen Capital LLC</small>
       </div>
 
       <div>
@@ -385,7 +526,7 @@
         </p>
       </div>
     </div>
-    <div class="bottom">© 2025 Heritage Realty Solutions. All Rights Reserved.</div>
+    <div class="bottom">© 2025 Heritage Realty Solutions. Presented by Lumen Capital LLC. All Rights Reserved.</div>
   </footer>
 
   <!-- MOBILE ACTION BAR -->
@@ -402,7 +543,7 @@
           e.target.classList.add('visible');
           observer.unobserve(e.target);
         }
-      })
+      });
     },{threshold:0.12});
     document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
   </script>
